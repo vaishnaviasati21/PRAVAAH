@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PilgrimOS — Autonomous Indian Temple Pilgrimage & Travel Agent</title>
+  <meta name="description" content="Autonomous pilgrimage planner for Indian temples (Tirupati, Varanasi, Vaishno Devi, Shirdi, Sabarimala). Researches darshan slots, transport, accommodation, and crowd density with strict Human-In-The-Loop approval." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+</head>
+<body>
+  <div id="app" class="pilgrimos-app">
+    <!-- Header injected by main.ts or fallback shell -->
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="brand-wrapper">
+          <div class="brand-icon-box">ॐ</div>
+          <div class="brand-text-group">
+            <div class="brand-title">PILGRIM<span class="accent">OS</span></div>
+            <div class="brand-subtitle">Autonomous Pilgrimage Intelligence</div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="safety-pill pulse-dot">HITL Safety Active</div>
+          <div class="mode-toggle">
+            <button id="mode-shadow" class="active" title="Shadow Adapter Demo Mode">Demo Mode</button>
+            <button id="mode-source" title="Connect to Live Backend">Live Backend</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content" id="main-content">
+      <!-- Reactive view dynamic mount container -->
+    </main>
+  </div>
+
+  <!-- Loaded application bundle (supports both http:// and local file://) -->
+  <script src="./bundle.js" defer></script>
+</body>
+</html>
