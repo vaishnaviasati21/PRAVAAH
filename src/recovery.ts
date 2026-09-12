@@ -25,7 +25,7 @@ export class DangerousActionError extends Error {
   }
 }
 
-import { ErrorHandler } from './error_handler';
+import { ErrorHandler } from './error_handler.js';
 
 export class RecoveryManager {
   static async retry<T>(
@@ -45,7 +45,7 @@ export class RecoveryManager {
         return await fn(attempt);
       } catch (error) {
         lastError = error;
-        const canRetry = attempt < merged.maxAttempts && (merged.shouldRetry?.(error, attempt) ?? ErrorHandler.isRetryable(ErrorHandler.classify(error)));
+        const canRetry = attempt < merged.maxAttempts && (merged.shouldRetry?.(error, attempt) ?? true);
         if (!canRetry) throw error;
 
         const exponential = Math.min(
